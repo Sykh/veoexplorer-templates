@@ -15,7 +15,7 @@
 	<tr>
 		<td>{{ pool.blocks }}</td>
 		<td>{{ pool.quote}}%</td>
-		<td>{{ pool.name }}</td>
+		<td><a href="http://{{ pool.name }}" target="_BLANK">{{ pool.name }}</a></td>
 		<td><a href="?input={{ pool.pubkey }}">{{ pool.pubkey }}</a></td>
 		<td>{{ pool.hashrate }}</td>
 	</tr>

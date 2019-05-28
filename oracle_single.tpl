@@ -1,4 +1,4 @@
-<h3>Oracle Data #{{ oracle.id }}</h3>
+<h3>Oracle Data {{ oracle.id }}</h3>
 <table class="block_overview">
 	<tr><th>Created in block:</th><td>{{ oracle.height }}</td></tr>
     <tr><th>Created at:</th><td>{{ oracle.date }}</td></tr>

@@ -9,7 +9,9 @@
 <div id="logo"><a href="index.php"><img src="files/logo.png"></a></div>
 <div id="main">
 	height {{ current_height }} | market cap {{ market_cap }} VEO<br>
-	<a href="?input=oracles_gov">Governance Oracles</a> | <a href="?input=oracles_asks">Question Oracles</a>
+	<a href="?input=holders">Holders</a> | 
+	<a href="?input=oracles_gov">Governance Oracles</a> | 
+	<a href="?input=oracles_asks">Question Oracles</a>
 	<form>
 		Pubkey, height or TXID: <input name="input" value="{{ input }}" size="88"> <input type="submit" value="Search">
 	</form>
@@ -36,6 +38,9 @@
 	{% endif %}
 	{% if oracles_asks %}
 		{{include("oracles_asks.tpl")}}
+	{% endif %}
+	{% if holders %}
+		{{include("holders.tpl")}}
 	{% endif %}
 </div>
 </div>

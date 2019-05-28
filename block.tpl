@@ -29,11 +29,19 @@
 		<tr>
 			<td>{{ loop.index }}</td>
 			<td>{{ tx.type }}</td>
-			<td><a href="index.php?input={{ tx.pubkey_from }}">{{ tx.pubkey_from[:30] }}</a></td>
+			<td>
+				{%if tx.type != "coinbase" %}
+					<a href="index.php?input={{ tx.pubkey_from }}">{{ tx.pubkey_from[:30] }}</a>
+				{% endif %}
+			</td>
 			<td><a href="index.php?input={{ tx.pubkey_to }}">{{ tx.pubkey_to[:30] }}</a></td>
 			<td>{{ tx.amount }}</td>
 			<td>{{ tx.fee }}</td>
-			<td><a href="?input={{ tx.txid }}">Track</a></td>
+			<td>
+				{%if tx.type != "coinbase" %}
+					<a href="?input={{ tx.txid }}">Track</a>
+				{% endif%}
+			</td>
 		</tr>
 	{% endfor %}
 	</table>
