@@ -1,6 +1,7 @@
 <h3>Top 100 Holders</h3>
 <table class="block_overview">
 	<tr>
+		<th>#</th>
 		<th>Pubkey</th>
 		<th>Balance</th>
 		<th>%</th>
@@ -8,6 +9,7 @@
 		</tr>
 	{% for holder in holders %}
 		<tr>
+			<td>{{ loop.index }}</td>
 			<td>{{ holder.pubkey }}</td>
 			<td>{{ holder.balance }}</td>
 			<td>{{ holder.quote }}</td>
