@@ -10,7 +10,7 @@
 	{% for holder in holders %}
 		<tr>
 			<td>{{ loop.index }}</td>
-			<td>{{ holder.pubkey }}</td>
+			<td><a href="index.php?input={{ holder.pubkey }}">{{ holder.pubkey }}</a></td>
 			<td>{{ holder.balance }}</td>
 			<td>{{ holder.quote }}</td>
 			<td>{{ holder.alias }}</td>
